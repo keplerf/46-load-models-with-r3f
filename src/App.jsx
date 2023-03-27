@@ -17,12 +17,12 @@ const App = () => {
         position: [-4, 3, 6],
       }}
     >
-      <PerformanceMonitor
+      {/* <PerformanceMonitor
         onIncline={() => setDpr(2)}
         onDecline={() => setDpr(1)}
-      >
-        <Experience />
-      </PerformanceMonitor>
+      > */}
+      <Experience />
+      {/* </PerformanceMonitor> */}
     </Canvas>
   );
 };

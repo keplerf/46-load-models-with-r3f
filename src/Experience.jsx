@@ -1,5 +1,7 @@
 import { OrbitControls } from "@react-three/drei";
 import { Perf } from "r3f-perf";
+import Fox from "./Fox.jsx";
+import Burger from "./Burger.jsx";
 
 export default function Experience() {
   return (
@@ -8,7 +10,12 @@ export default function Experience() {
 
       <OrbitControls makeDefault />
 
-      <directionalLight castShadow position={[1, 2, 3]} intensity={1.5} />
+      <directionalLight
+        castShadow
+        position={[1, 2, 3]}
+        intensity={1.5}
+        shadow-normalBias={0.04}
+      />
       <ambientLight intensity={0.5} />
 
       <mesh castShadow position-x={-2}>
@@ -20,6 +27,9 @@ export default function Experience() {
         <boxGeometry />
         <meshStandardMaterial color="mediumpurple" />
       </mesh>
+
+      <Fox />
+      <Burger />
 
       <mesh
         receiveShadow
